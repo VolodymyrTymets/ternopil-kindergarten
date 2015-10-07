@@ -23,3 +23,5 @@ underscore
 iron:router
 fezvrasta:bootstrap-material-design
 ejson
+tap:i18n
+tap:i18n-ui
