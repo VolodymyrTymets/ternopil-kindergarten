@@ -1,13 +1,25 @@
 <template name="Layout">
-    <header>
-        {{> yield region='header'}}
-    </header>
-    <div class="main-content container-fluid">
-        {{> yield}}
+    <div id="particles-js">
+
     </div>
-    <footer class="container">
-        <div class="footer-well">
-            {{_ "brand"}} &copy;2015
+
+    <div class="container ">
+        <div class="row">
+            <div class="col-md-12">
+                    {{> NavBar}}
+            </div>
+         </div>
+        <div class="row">
+            <div class="col-md-12">
+
+                {{> yield}}
+            </div>
         </div>
-    </footer>
+        <footer class="container">
+            <div class="footer-well">
+                {{_ "brand"}} &copy;2015
+            </div>
+        </footer>
+    </div>
+
 </template>

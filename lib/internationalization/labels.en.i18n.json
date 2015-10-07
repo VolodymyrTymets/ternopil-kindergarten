@@ -2,5 +2,13 @@
   "brand": "Ternopil Kindegarden",
   "notFound": "Page is not Found",
   "loading": "Loading",
-  "accessForbidden": "You have no permission to do his"
+  "accessForbidden": "You have no permission to do his",
+  "submit":"Submit",
+  "cancel":"Cancel",
+  "kindergarten":"Kindergarten",
+
+  "forms_name": "Name",
+
+  "forms_kindergarten_name": "Enter name of kindergarten here...",
+  "forms_kindergarten_description":"Enter your description here..."
 }
