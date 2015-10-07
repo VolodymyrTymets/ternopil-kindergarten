@@ -1,0 +1,13 @@
+<template name="Layout">
+    <header>
+        {{> yield region='header'}}
+    </header>
+    <div class="main-content container-fluid">
+        {{> yield}}
+    </div>
+    <footer class="container">
+        <div class="footer-well">
+            Ternopil &copy;2015
+        </div>
+    </footer>
+</template>
