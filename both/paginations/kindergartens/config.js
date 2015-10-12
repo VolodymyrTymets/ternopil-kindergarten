@@ -7,6 +7,6 @@ Pages = new Meteor.Pagination(Kindergartens,{
     itemTemplate: "KindergartenItem",
     perPage: 5,
     sort: {
-        id: 1
+        name: 1
     }
 })

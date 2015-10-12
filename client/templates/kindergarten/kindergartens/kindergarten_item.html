@@ -1,9 +1,22 @@
 <template name="KindergartenItem">
     <div class="row">
         <div class="col-md-12">
-            <div class="jumbotron">
+            <div class="wrapper">
+                {{#if Admin}}
+                    <div class="icons">
+                        <a  href="{{pathFor 'kindergartenEditor' _id=this._id }}" class="mdi-content-create"></a>
+                        <a data-action="remove" class="mdi-action-delete"></a>
+                    </div>
+                {{/if}}
+                <div class="more">
+                    <a  href="{{pathFor 'kindergarten' _id=this._id }}" class="btn btn-flat btn-default">{{_ 'more'}}...</a>
+                </div>
                 <h1>{{name}}</h1>
-                {{#markdown}}{{description}}{{/markdown}}
+                URL: {{image.url}}
+                ImageId: {{titleImageId}}
+                Id: {{_id}}
+                <div class="quote">{{#markdown}}{{description}}{{/markdown}}</div>
+
             </div>
         </div>
     </div>
