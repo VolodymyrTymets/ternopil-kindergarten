@@ -9,6 +9,6 @@ Template.KindergartenItem.events({
 Template.KindergartenItem.helpers({
     'image': function () {
         var imageId  = this.titleImageId ? this.titleImageId :'';
-        return Images.find({ _id: imageId });
+        return Images.findOne({ _id: imageId });
     }
 })

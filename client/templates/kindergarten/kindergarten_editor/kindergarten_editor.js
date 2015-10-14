@@ -19,7 +19,7 @@ Template.KindergartenEditor.events({
         var descriprion = tmp.$('textarea[data-name="description"]').val().replace(/\s+/g, '');
         var $title = document.getElementById('title-file');
         var titleImage  = $title && $title.files.length > 0 ? $title.files[0] : null;
-        var fsFile = new FS.File(titleImage);
+
         debugger;
         var data = {
             name:name,
@@ -28,7 +28,7 @@ Template.KindergartenEditor.events({
         if(tmp._editMode){
             Kindergartens.update({_id:tmp.data._id},{ $set: data });
         }else{
-            Images.insert(fsFile, function (err, fileObj) {
+            Images.insert(titleImage, function (err, fileObj) {
                 if(!err)  data.titleImageId = fileObj._id;
                 Meteor.call('insertKindergarte',data , function (err,res) {
                     Router.go('/');
@@ -36,14 +36,6 @@ Template.KindergartenEditor.events({
             });
 
         }
-    },
-    'change .myFileInput': function(e, tmp) {
-        debugger
-        //FS.Utility.eachFile(event, function(file) {
-        //    Images.insert(file, function (err, fileObj) {
-        //        // Inserted new doc with ID fileObj._id, and kicked off the data upload using HTTP
-        //    });
-        //});
     },
     'blur input[data-name="name"]': function (e,tmp){
         if (e.target.value === '') tmp._requireName.set(false);

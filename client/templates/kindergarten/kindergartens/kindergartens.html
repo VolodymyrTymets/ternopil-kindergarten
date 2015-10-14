@@ -1,14 +1,4 @@
 <template name="kindergartens">
     {{> pagesNav}}
     {{> pages}}
-
-    {{#each images}}
-        <div class="row" >
-            <div class="col-md-12" >
-            img:{{this.name}}
-            <a href="/upload/images/{{this.name}}" target="_blank" id="fff"><img src="{{this}}" alt="" class="thumbnail" /></a>
-            </div>
-        </div>
-    {{/each}}
-
 </template>

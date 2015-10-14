@@ -12,9 +12,7 @@
                     <a  href="{{pathFor 'kindergarten' _id=this._id }}" class="btn btn-flat btn-default">{{_ 'more'}}...</a>
                 </div>
                 <h1>{{name}}</h1>
-                URL: {{image.url}}
-                ImageId: {{titleImageId}}
-                Id: {{_id}}
+                <a href="{{image.url}}" target="_blank" > <img src="{{image.url store='images'}}"></a>
                 <div class="quote">{{#markdown}}{{description}}{{/markdown}}</div>
 
             </div>
