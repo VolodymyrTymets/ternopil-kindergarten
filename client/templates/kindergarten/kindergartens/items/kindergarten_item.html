@@ -1,0 +1,23 @@
+<template name="KindergartenItem">
+    <li>
+        <a href="#">
+            <figure>
+                <div class="icons">
+                    <a href="" class="label label-info">Messages <span class="badge">3</span></a>
+                    {{#if Admin}}
+                            <a  href="{{pathFor 'kindergartenEditor' _id=this._id }}" class="mdi-content-create"></a>
+                            <a data-action="remove" class="mdi-action-delete"></a>
+                    {{/if}}
+                </div>
+                <img src="{{image.url store='images'}}">
+                <h1 class="title">{{name}}</h1>
+                <div class="description">
+                    <p>{{#markdown}}{{description}}{{/markdown}}</p> <!-- / description -->
+                    <div class="more">
+                        <a  href="{{pathFor 'kindergarten' _id=this._id }}" class="btn btn-flat btn-default">{{_ 'more'}}...</a>
+                    </div>
+                </div>
+            </figure>
+        </a>
+    </li>
+</template>

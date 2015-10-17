@@ -25,17 +25,24 @@ Template.KindergartenEditor.events({
             name:name,
             description:descriprion
         };
-        if(tmp._editMode){
-            Kindergartens.update({_id:tmp.data._id},{ $set: data });
-        }else{
-            Images.insert(titleImage, function (err, fileObj) {
-                if(!err)  data.titleImageId = fileObj._id;
-                Meteor.call('insertKindergarte',data , function (err,res) {
-                    Router.go('/');
-                })
-            });
+        Kindergartens.set(data,titleImage,function (){
+            Router.go('/');
+        })
+        //Meteor.call('saveKindergarten',data, titleImage , function (err,res) {
+        //    Router.go('/');
+        //});
 
-        }
+        //if(tmp._editMode){
+        //    Kindergartens.update({_id:tmp.data._id},{ $set: data });
+        //}else{
+        //    Images.insert(titleImage, function (err, fileObj) {
+        //        if(!err)  data.titleImageId = fileObj._id;
+        //        Meteor.call('insertKindergarte',data , function (err,res) {
+        //            Router.go('/');
+        //        })
+        //    });
+        //
+        //}
     },
     'blur input[data-name="name"]': function (e,tmp){
         if (e.target.value === '') tmp._requireName.set(false);

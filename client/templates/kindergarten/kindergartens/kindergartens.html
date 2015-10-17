@@ -1,4 +1,15 @@
-<template name="kindergartens">
-    {{> pagesNav}}
-    {{> pages}}
+<template name="Kindergartens">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="kindergartens">
+            <ul class=" items">
+                {{#each items}}
+                   {{name}}
+                    {{#markdown}}{{description}}{{/markdown}}
+                    {{> KindergartenItem}}
+                {{/each}}
+            </ul>
+            </div>
+        </div>
+    </div>
 </template>

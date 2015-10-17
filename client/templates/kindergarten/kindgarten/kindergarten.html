@@ -1,10 +1,11 @@
 <template name="Kindergarten">
     <div class="row">
         <div class="col-md-12">
-            <div class="jumbotron">
-                <h1>{{name}}</h1>
-               {{#markdown}}{{description}}{{/markdown}}
-
+            <div class="thumbnail">
+                <img src="{{image.url store='images'}}" alt="..." class="img-thumbnail">
+                <div class="caption">
+                 <p>{{#markdown}}{{description}}{{/markdown}}</p>
+                </div>
             </div>
         </div>
     </div>

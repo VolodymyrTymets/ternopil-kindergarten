@@ -1,8 +1,5 @@
-Template.kindergartens.onCreated(function () {
-    Meteor.subscribe('images',{});
-});
-Template.kindergartens.helpers({
-    'images': function () {
-        return Images.find();
+Template.Kindergartens.helpers({
+    'items': function () {
+        return Kindergartens.find();
     }
 })

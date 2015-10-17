@@ -23,7 +23,6 @@ iron:router
 ejson
 tap:i18n
 tap:i18n-ui
-alethes:pages
 froala:editor
 markdown
 accounts-password
