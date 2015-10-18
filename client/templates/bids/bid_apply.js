@@ -27,7 +27,14 @@ Template.BidApply.events({
         };
         Bids.set(data,certificateFile,statementFile,birthCertificateFile,function (){
             Router.go('/');
-        })
-
-    },
-})
+        });
+    }
+});
+Template.BidApply.helpers({
+    'canApply':function () {
+        return Bids.find({createdOn:Meteor.user()._id}).count() < 5;
+    }
+});
+Template.BidApply.onRendered(function () {
+    $.material.input();
+});

@@ -31,3 +31,4 @@ fezvrasta:bootstrap-material-design
 cfs:standard-packages
 cfs:gridfs
 aslagle:reactive-table
+pcel:loading

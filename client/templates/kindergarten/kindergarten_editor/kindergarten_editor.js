@@ -8,9 +8,6 @@ Template.KindergartenEditor.onCreated(function () {
     this._editMode = this.data !== null ? true : false;
 
 });
-Template.KindergartenEditor.onRendered(function () {
-    $('textarea[data-name="description"]').editable({inlineMode: false});
-});
 Template.KindergartenEditor.events({
     'submit form':function (e,tmp) {
         e.preventDefault();
@@ -34,4 +31,10 @@ Template.KindergartenEditor.events({
         else tmp._requireName.set(true);
 
     }
+});
+Template.KindergartenEditor.onRendered(function () {
+    $('textarea[data-name="description"]').editable({inlineMode: false});
+});
+Template.KindergartenEditor.onRendered(function () {
+    $.material.input();
 });

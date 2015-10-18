@@ -4,8 +4,19 @@
             <div class="thumbnail">
                 <img src="{{image.url store='images'}}" alt="..." class="img-thumbnail">
                 <div class="caption">
-                 {{> reactiveTable settings=settings}}
-                 <p>{{#markdown}}{{description}}{{/markdown}}</p>
+                  <h1>{{name}}</h1>
+                    <div class="row">
+                        <div class="col-md-10 col-md-offset-1 well">
+                            <h3>{{_ 'bids'}}</h3>
+                            {{> reactiveTable settings=settings}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 ">
+                            <p>{{#markdown}}{{description}}{{/markdown}}</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>

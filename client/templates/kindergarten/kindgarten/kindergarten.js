@@ -10,10 +10,10 @@ Template.Kindergarten.helpers({
             rowsPerPage: 10,
             showFilter: true,
             fields: [
-                { key: '_id', label:TAPi18n.__('inQuete'), tmpl: Template.InQueteColumn },
+                { key: '_id', label:TAPi18n.__('inQuote'), tmpl: Template.InQueteColumn },
                 { key: 'name', label: TAPi18n.__('name') },
                 { key: 'surname', label: TAPi18n.__('surname') },
-                { key: 'lastName', label: TAPi18n.__('lastName') },
+                { key: 'lastName', label: TAPi18n.__('last_name') },
                 { key: 'phone', label: TAPi18n.__('phone') },
                 { key: 'email', label: TAPi18n.__('email') },
                 { key: 'address', label: TAPi18n.__('address') },

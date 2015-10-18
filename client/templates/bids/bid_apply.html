@@ -1,59 +1,69 @@
 <template name="BidApply">
     <div class="row">
         <div class="col-md-10 col-md-offset-1 well" >
-            <form class="form-horizontal">
-                <fieldset>
-                    <legend>{{_ 'bidsData'}}</legend>
-                    <div class="form-group ">
-                        <input class="form-control floating-label" data-name="name" type="text"
-                               placeholder="{{_ 'forms_name'}}"  data-hint="{{_ 'forms_bids_name'}}">
-                    </div>
-                    <div class="form-group ">
-                        <input class="form-control floating-label" data-name="surname" type="text"
-                               placeholder="{{_ 'forms_surname'}}"  data-hint="{{_ 'forms_bids_surname'}}">
-                    </div>
-                    <div class="form-group ">
-                        <input class="form-control floating-label" data-name="last-name" type="text"
-                               placeholder="{{_ 'forms_last_name'}}"  data-hint="{{_ 'forms_bids_last_name'}}">
-                    </div>
-                    <div class="form-group ">
-                        <input class="form-control floating-label" data-name="phone" type="text"
-                               placeholder="{{_ 'forms_phone'}}"  data-hint="{{_ 'forms_bids_phone'}}">
-                    </div>
-                    <div class="form-group ">
-                        <input class="form-control floating-label" data-name="email" type="text"
-                               placeholder="{{_ 'forms_email'}}"  data-hint="{{_ 'forms_bids_email'}}">
-                    </div>
-                    <div class="form-group ">
-                        <input class="form-control floating-label" data-name="address" type="text"
-                               placeholder="{{_ 'forms_address'}}"  data-hint="{{_ 'forms_bids_address'}}">
-                    </div>
-                    <legend>{{_ 'bidsFiles'}}</legend>
-                    <div  class="well center-block" style="max-width: 400px;">
-                        <div class="form-group">
-                            <input type="text" readonly="" class="form-control floating-label"
-                                   placeholder="{{_ 'forms_certificate'}}" data-hint="{{_ 'forms_bids_certificate'}}">
-                            <input type="file" data-name="certificate" id="certificate" multiple="">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" readonly="" class="form-control floating-label"
-                                   placeholder="{{_ 'forms_statement'}}" data-hint="{{_ 'forms_bids_statement'}}">
-                            <input type="file" data-name="statement" id="statement" multiple="">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" readonly="" class="form-control floating-label"
-                             placeholder="{{_ 'forms_birth_certificate'}}" data-hint="{{_ 'forms_birth_certificate'}}">
-                            <input type="file" data-name="birth-certificate" id="birth-certificate" multiple="">
-                        </div>
-                    </div>
+            {{#if canApply}}
+                <div class="alert alert-dismissable alert-info">
 
-                    <div class="form-group ">
-                        <div class="col-lg-2 col-lg-offset-10">
-                            <button type="submit" class="btn btn-primary">{{_ 'submit'}}</button>
+                    <p>{{_ 'bidApplyMessage'}}</p>
+                </div>
+                <form class="form-horizontal">
+                    <fieldset>
+                        <legend>{{_ 'bidsData'}}</legend>
+                        <div class="form-group ">
+                            <input class="form-control floating-label" data-name="name" type="text"
+                                   placeholder="{{_ 'forms_name'}}"  data-hint="{{_ 'forms_bids_name'}}">
                         </div>
-                    </div>
-                </fieldset>
-            </form>
+                        <div class="form-group ">
+                            <input class="form-control floating-label" data-name="surname" type="text"
+                                   placeholder="{{_ 'forms_surname'}}"  data-hint="{{_ 'forms_bids_surname'}}">
+                        </div>
+                        <div class="form-group ">
+                            <input class="form-control floating-label" data-name="last-name" type="text"
+                                   placeholder="{{_ 'forms_last_name'}}"  data-hint="{{_ 'forms_bids_last_name'}}">
+                        </div>
+                        <div class="form-group ">
+                            <input class="form-control floating-label" data-name="phone" type="text"
+                                   placeholder="{{_ 'forms_phone'}}"  data-hint="{{_ 'forms_bids_phone'}}">
+                        </div>
+                        <div class="form-group ">
+                            <input class="form-control floating-label" data-name="email" type="text"
+                                   placeholder="{{_ 'forms_email'}}"  data-hint="{{_ 'forms_bids_email'}}">
+                        </div>
+                        <div class="form-group ">
+                            <input class="form-control floating-label" data-name="address" type="text"
+                                   placeholder="{{_ 'forms_address'}}"  data-hint="{{_ 'forms_bids_address'}}">
+                        </div>
+                        <legend>{{_ 'bidsFiles'}}</legend>
+                        <div  class="well center-block" style="max-width: 400px;">
+                            <div class="form-group">
+                                <input type="text" readonly="" class="form-control floating-label"
+                                       placeholder="{{_ 'forms_certificate'}}" data-hint="{{_ 'forms_bids_certificate'}}">
+                                <input type="file" data-name="certificate" id="certificate" multiple="">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" readonly="" class="form-control floating-label"
+                                       placeholder="{{_ 'forms_statement'}}" data-hint="{{_ 'forms_bids_statement'}}">
+                                <input type="file" data-name="statement" id="statement" multiple="">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" readonly="" class="form-control floating-label"
+                                       placeholder="{{_ 'forms_birth_certificate'}}" data-hint="{{_ 'forms_bids_birth_certificate'}}">
+                                <input type="file" data-name="birth-certificate" id="birth-certificate" multiple="">
+                            </div>
+                        </div>
+
+                        <div class="form-group ">
+                            <div class="col-lg-2 col-lg-offset-10">
+                                <button type="submit" class="btn btn-primary">{{_ 'submit'}}</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            {{else}}
+                <div class="alert alert-dismissable alert-warning">
+                    <p>{{_ 'bidNotApplyMessage'}}</p>
+                </div>
+            {{/if}}
         </div>
     </div>
 </template>

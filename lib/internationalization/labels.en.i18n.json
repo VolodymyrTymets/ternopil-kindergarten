@@ -1,7 +1,7 @@
 {
   "brand": "Ternopil Kindegarden",
   "notFound": "Page is not Found",
-  "loading": "Loading",
+  "loading": "Please wait",
   "accessForbidden": "You have no permission to do his",
   "submit":"Submit",
   "cancel":"Cancel",
@@ -11,11 +11,50 @@
   "actions":"Actions",
   "bidApply":"Apply Bid",
   "children": "Children",
+  "bids":"Bids",
 
   "ami_new_kindergarten":"New kindergarten",
 
+  "bidsData":"Bid Data",
+  "bidsFiles":"Bid Documents",
+
+  "name": "Name",
+  "surname": "Surname",
+  "last_name": "Last Name",
+  "phone": "Phone",
+  "email": "Email",
+  "address": "Address",
+  "description" : "Descriprtion",
+  "surname": "Name",
+  "birth—ertificate":"Birth Certificate",
+  "certificate":"Certificate",
+  "statement":"Statement",
+  "files": "Files",
+  "inQuote":"In quote π",
+
+
   "forms_name": "Name",
+  "forms_surname": "Surname",
+  "forms_last_name": "Last Name",
+  "forms_phone": "Phone",
+  "forms_email": "Email",
+  "forms_address": "Address",
+  "forms_description" : "Descriprtion",
+  "forms_birth_certificate":"Birth Certificate",
+  "forms_certificate":"Certificate",
+  "forms_statement":"Statement",
 
   "forms_kindergarten_name": "Enter name of kindergarten here...",
-  "forms_kindergarten_description":"Enter your description here..."
+  "forms_kindergarten_description":"Enter your description here...",
+  "forms_kindergarten_image":"Title image",
+
+  "forms_bids_name": "Enter name of your child here...",
+  "forms_bids_surname": "Enter surname of your child here...",
+  "forms_bids_last_name": "Enter last name of your child here...",
+  "forms_bids_phone": "Enter  your phone here...",
+  "forms_bids_email": "Enter your email here...",
+  "forms_bids_address": "Enter  your address here...",
+  "forms_bids_birth_certificate":"Chouse birth certificate here...",
+  "forms_bids_certificate":"Chouse certificate here...",
+  "forms_bids_statement":"Chouse statement here..."
 }
