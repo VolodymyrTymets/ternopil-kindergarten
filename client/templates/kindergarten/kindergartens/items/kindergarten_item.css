@@ -11,6 +11,11 @@
     bottom:0;
     right: 0;
 }
+.apply-bid{
+    position:absolute;
+    bottom:0;
+    left: 0;
+}
 
 .pagination > li > a, .pagination > li > span {
     background-color: #EEE;

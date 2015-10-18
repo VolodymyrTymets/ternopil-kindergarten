@@ -1,3 +1,3 @@
-Meteor.publish('kindergartens', function (opts){
-        return Kindergartens.find(opts)
+Meteor.publish('kindergartens', function (filter,opts){
+        return Kindergartens.find(filter,opts);
 })

@@ -11,7 +11,11 @@ Template.KindergartenItem.helpers({
         debugger
         var imageId  = this.titleImageId ? this.titleImageId :'';
         return Images.findOne({ _id: imageId });
+    },
+    'countOfBids': function () {
+        return Bids.find({kindergartenId:this._id}).count();
     }
+
 });
 
 Template.KindergartenItem.onRendered(function () {

@@ -1,0 +1,27 @@
+<template name="FilesColumn">
+    {{#if Admin}}
+      <ul class="list-group" >
+          <li class="list-group-item">
+              {{_ 'certificate'}}: <a href="{{certificate.url}}" target="_blank" class="mdi-file-cloud-download">  </a>
+          </li>
+          <li class="list-group-item">
+              {{_ 'birthCertificate'}}:  <a href="{{birthCertificate.url}}" target="_blank" class="mdi-file-cloud-download"></a>
+          </li>
+          <li class="list-group-item">
+            {{_ 'statement'}}:   <a href="{{statement.url}}" target="_blank" class="mdi-file-cloud-download"></a>
+          </li>
+      </ul>
+    {{else}}
+        <ul class="list-group" >
+            <li class="list-group-item">
+                {{_ 'certificate'}}: <span class="mdi-file-cloud-done">  </span>
+            </li>
+            <li class="list-group-item">
+                {{_ 'birthCertificate'}}:  <span class="mdi-file-cloud-done"></span>
+            </li>
+            <li class="list-group-item">
+                {{_ 'statement'}}:   <span class="mdi-file-cloud-done"></span>
+            </li>
+        </ul>
+    {{/if}}
+</template>

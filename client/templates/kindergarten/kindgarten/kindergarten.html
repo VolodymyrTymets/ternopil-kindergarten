@@ -4,6 +4,7 @@
             <div class="thumbnail">
                 <img src="{{image.url store='images'}}" alt="..." class="img-thumbnail">
                 <div class="caption">
+                 {{> reactiveTable settings=settings}}
                  <p>{{#markdown}}{{description}}{{/markdown}}</p>
                 </div>
             </div>
