@@ -17,7 +17,6 @@ Template.KindergartenEditor.events({
         var $title = document.getElementById('title-file');
         var titleImage  = $title && $title.files.length > 0 ? $title.files[0] : null;
 
-        debugger;
         var data = {
             name:name,
             description:descriprion

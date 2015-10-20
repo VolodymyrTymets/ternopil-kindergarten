@@ -12,6 +12,7 @@
   "bidApply":"Apply Bid",
   "children": "Children",
   "bids":"Bids",
+  "loginFirst":"You should login first",
 
   "ami_new_kindergarten":"New kindergarten",
 
@@ -26,11 +27,11 @@
   "address": "Address",
   "description" : "Descriprtion",
   "surname": "Name",
-  "birthÑertificate":"Birth Certificate",
+  "birthï¿½ertificate":"Birth Certificate",
   "certificate":"Certificate",
   "statement":"Statement",
   "files": "Files",
-  "inQuote":"In quote ¹",
+  "inQuote":"In quote ï¿½",
 
 
   "forms_name": "Name",

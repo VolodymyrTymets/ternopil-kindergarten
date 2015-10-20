@@ -48,6 +48,7 @@
 }
 .kindergartens ul.items li figure img {
     width: 100%;
+    height: 300px;
     -webkit-transition: -webkit-transform 0.3s ease-out, opacity 0.3s;
     transition: transform 0.3s ease-out, opacity 0.3s;
     -moz-transition: -moz-transform 0.3s ease-out, opacity 0.3s;

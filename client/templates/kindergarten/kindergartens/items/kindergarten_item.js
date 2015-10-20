@@ -8,7 +8,6 @@ Template.KindergartenItem.events({
 });
 Template.KindergartenItem.helpers({
     'image': function () {
-        debugger
         var imageId  = this.titleImageId ? this.titleImageId :'';
         return Images.findOne({ _id: imageId });
     },
@@ -17,7 +16,3 @@ Template.KindergartenItem.helpers({
     }
 
 });
-
-Template.KindergartenItem.onRendered(function () {
-    debugger
-})

@@ -25,16 +25,26 @@ Template.BidApply.events({
             address:address,
             kindergartenId:Router.current().params._kindergartenId
         };
-        Bids.set(data,certificateFile,statementFile,birthCertificateFile,function (){
+        if( data.name === '' || data.surname === '' || data.lastName === '' || data.email === '' || data.phone === '' || data.address === '' || !certificateFile || !statementFile || !birthCertificateFile ){
+         sAlert.warning(TAPi18n.__('fieldWarning'));
+        }
+        Bids.set(data,certificateFile,statementFile,birthCertificateFile,function (err,res){
+           if(!err){
+               sAlert.success(TAPi18n.__('actionSucess'));
+           }else{
+               sAlert.error(TAPi18n.__(err.message));
+           }
             Router.go('/');
         });
     }
 });
 Template.BidApply.helpers({
     'canApply':function () {
-        return Bids.find({createdOn:Meteor.user()._id}).count() < 5;
+        return Bids.find({createdOn:Meteor.user()._id}).count() > 5;
     }
 });
 Template.BidApply.onRendered(function () {
     $.material.input();
+    $('input[data-name="phone"]').mask("(999) 99-99-999");
+
 });

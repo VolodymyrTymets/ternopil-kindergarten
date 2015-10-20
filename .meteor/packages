@@ -32,3 +32,6 @@ cfs:standard-packages
 cfs:gridfs
 aslagle:reactive-table
 pcel:loading
+sewdn:masked-input
+juliancwirko:s-alert
+juliancwirko:s-alert-bouncyflip

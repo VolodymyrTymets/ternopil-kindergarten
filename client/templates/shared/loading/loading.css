@@ -8,3 +8,16 @@
 .sk-spinner-rotating-plane.sk-spinner {
     background-color: rgb(228, 255, 0);
 }
+.big-title{
+    color: white;
+    font-family: monospace;
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.litle-title{
+    color: white;
+    font-family: monospace;
+    font-size: 27px;
+    text-align: center;
+}

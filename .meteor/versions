@@ -67,6 +67,8 @@ iron:middleware-stack@1.0.9
 iron:router@1.0.9
 iron:url@1.0.9
 jquery@1.11.4
+juliancwirko:s-alert@3.1.1
+juliancwirko:s-alert-bouncyflip@3.1.0
 launch-screen@1.0.4
 livedata@1.0.15
 localstorage@1.0.5
@@ -98,6 +100,7 @@ retry@1.0.4
 routepolicy@1.0.6
 service-configuration@1.0.5
 session@1.1.1
+sewdn:masked-input@1.0.6
 sha@1.0.4
 spacebars@1.0.7
 spacebars-compiler@1.0.7
