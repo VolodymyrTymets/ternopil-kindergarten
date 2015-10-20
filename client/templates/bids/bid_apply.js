@@ -42,7 +42,7 @@ Template.BidApply.events({
 });
 Template.BidApply.helpers({
     'canApply':function () {
-        return Bids.find({createdBy:Meteor.user()._id}).count() < 5;
+        return Bids.find({createdBy:Meteor.user() ? Meteor.user()._id : undefined}).count() < 5;
     }
 });
 Template.BidApply.onRendered(function () {
