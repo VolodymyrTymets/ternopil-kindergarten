@@ -1,0 +1,34 @@
+@-webkit-keyframes typing { from { width: 0; } }
+@-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
+.home-title h2 {
+    font-size: 59px;
+    color: white;
+    font-family: cursive;
+    text-align: center;
+}
+.home-icon {
+    color: white;
+    text-align: center;
+    font-size: 147px;
+}
+.home-icon span{
+    font-size: 147px;
+}
+.home-icon a{
+    color: white;
+}
+.home-click {
+    text-align: center;
+}
+.home-click span{
+    font: bold 1em monospace;
+    font-size: 15px;
+    color: white;
+    border-right: .1em solid white;
+    width: calc(0.55em * 14);
+    width: 14ch;
+    white-space: nowrap;
+    overflow: hidden;
+    -webkit-animation: typing 8s steps(14, end),
+    blink-caret .5s step-end infinite alternate;
+}

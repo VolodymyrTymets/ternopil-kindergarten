@@ -1,5 +1,7 @@
 {
   "brand": "Ternopil Kindegarden",
+  "welcome":"Welcome to our Service",
+  "clickMe":"Click me",
   "notFound": "Page is not Found",
   "loading": "Please wait",
   "accessForbidden": "You have no permission to do his",

@@ -30,17 +30,19 @@ Template.BidApply.events({
         }
         Bids.set(data,certificateFile,statementFile,birthCertificateFile,function (err,res){
            if(!err){
-               sAlert.success(TAPi18n.__('actionSucess'));
+               sAlert.success(TAPi18n.__('bidsSucess'));
+               Router.go('/');
            }else{
                sAlert.error(TAPi18n.__(err.message));
+               Router.go('/');
            }
-            Router.go('/');
+
         });
     }
 });
 Template.BidApply.helpers({
     'canApply':function () {
-        return Bids.find({createdOn:Meteor.user()._id}).count() > 5;
+        return Bids.find({createdBy:Meteor.user()._id}).count() < 5;
     }
 });
 Template.BidApply.onRendered(function () {

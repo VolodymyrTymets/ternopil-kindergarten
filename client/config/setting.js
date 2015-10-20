@@ -1,10 +1,12 @@
 Meteor.startup(function () {
+    TAPi18n.setLanguage('ua');
+    accountsUIBootstrap3.setLanguage('ua');
     sAlert.config({
         effect: '',
         position: 'bottom',
         timeout: 5000,
         html: false,
-        onRouteClose: true,
+        onRouteClose: false,
         stack: true,
         // or you can pass an object:
         // stack: {

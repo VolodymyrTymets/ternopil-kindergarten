@@ -1,4 +1,12 @@
 <template name="Home">
 I home
-
+    <div class="home-title">
+    <h2>{{_ 'welcome'}}</h2>
+    </div>
+    <div class="home-icon">
+       <a href="{{pathFor 'kindergartens'}}"> <span class="mdi-hardware-mouse"></span></a>
+    </div>
+    <div class="home-click">
+        <span > {{_ 'clickMe'}}...</span>
+    </div>
 </template>
