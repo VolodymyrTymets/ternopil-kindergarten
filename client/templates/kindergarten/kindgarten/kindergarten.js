@@ -7,10 +7,11 @@ Template.Kindergarten.helpers({
         var self = this;
         return {
             collection: Bids.find({ kindergartenId: self._id }),
-            rowsPerPage: 10,
+            rowsPerPage: 5,
             showFilter: true,
             fields: [
                 { key: '_id', label:TAPi18n.__('inQuote'), tmpl: Template.InQueteColumn },
+                { key: 'creationBy', label:TAPi18n.__('postedBy'), tmpl: Template.CreatedByColumn },
                 { key: 'name', label: TAPi18n.__('name') },
                 { key: 'surname', label: TAPi18n.__('surname') },
                 { key: 'lastName', label: TAPi18n.__('last_name') },

@@ -15,6 +15,7 @@
   "children": "Діти",
   "bids":"Заявки",
   "inQuote":"У черзі №",
+  "postedBy": "Створено",
   "loginFirst":"Спершу зареєструйтеся",
 
   "ami_new_kindergarten":"Новий садік",
@@ -29,7 +30,7 @@
   "email": "Email",
   "address": "Адреса",
   "description" : "Опис",
-  "birthCertificate":"Свідлтство про народження",
+  "birthCertificate":"Свідотство",
   "certificate":"Сертифікат",
   "statement":"Довідка",
   "files": "Документи",

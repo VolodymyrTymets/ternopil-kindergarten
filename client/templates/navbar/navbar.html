@@ -24,6 +24,11 @@
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
+                {{#if currentUser}}
+                    <li>
+                        {{> avatar user=user shape="circle"}}
+                    </li>
+                {{/if}}
                 {{> loginButtons}} <!-- here -->
             </ul>
             <ul class="nav navbar-nav navbar-right">

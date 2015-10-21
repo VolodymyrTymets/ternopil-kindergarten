@@ -28,6 +28,7 @@ markdown
 accounts-password
 mrt:accounts-vk
 ian:accounts-ui-bootstrap-3
+utilities:avatar
 fezvrasta:bootstrap-material-design
 cfs:standard-packages
 cfs:gridfs
@@ -36,3 +37,4 @@ pcel:loading
 sewdn:masked-input
 juliancwirko:s-alert
 juliancwirko:s-alert-bouncyflip
+reywood:publish-composite
