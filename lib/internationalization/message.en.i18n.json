@@ -4,5 +4,6 @@
   "bidNotApplyMessage":"You already leave 5 bids, you can remove  some after return.",
   "bidAdminMessage":"Admin can not leave bid.",
   "actionSucess":"Action was success",
-  "fieldWarning":"Fill all fields"
+  "fieldWarning":"Fill all fields",
+  "bidsSucess":"Bids was success"
 }

@@ -3,7 +3,7 @@ Template.Loading.rendered = function () {
     var spinner = '<div class="sk-spinner sk-spinner-rotating-plane"></div>';
     if ( ! Session.get('loadingSplash') ) {
         this.loading = window.pleaseWait({
-            logo: '/images/Meteor-logo.png',
+            logo: '/images//icons/brand.jpg',
             backgroundColor: '#0384B5',
             loadingHtml: message + spinner
         });
