@@ -26,6 +26,7 @@ tap:i18n-ui
 froala:editor
 markdown
 accounts-password
+mrt:accounts-vk
 ian:accounts-ui-bootstrap-3
 fezvrasta:bootstrap-material-design
 cfs:standard-packages
