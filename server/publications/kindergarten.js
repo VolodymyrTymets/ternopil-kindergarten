@@ -41,21 +41,23 @@ Meteor.publishComposite('singleKindergarten', function (kindergartenId) {
                 ]
         }
 });
-Meteor.publishComposite('kindergartens',  {
-        find: function () {
-                return Kindergartens.find({});
+Meteor.publishComposite('kindergartens', function (opts) {
+      return {
+              find: function () {
+                      return Kindergartens.find({});
 
-        },
-        children: [
-                {
-                        find: function (kindergarten) {
-                                return Images.find({_id:kindergarten.titleImageId});
-                        }
-                },
-                {
-                        find: function (kindergarten) {
-                                return Bids.find({kindergartenId:kindergarten._id});
-                        }
-                }
-        ]
+              },
+              children: [
+                      {
+                              find: function (kindergarten) {
+                                      return Images.find({_id: kindergarten.titleImageId});
+                              }
+                      },
+                      {
+                              find: function (kindergarten) {
+                                      return Bids.find({kindergartenId: kindergarten._id});
+                              }
+                      }
+              ]
+      }
 })
