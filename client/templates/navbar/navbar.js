@@ -5,8 +5,3 @@ Template.NavBar.events({
         $.material.input();
     }
 });
-Template.NavBar.helpers({
-    'user': function () {
-        return Meteor.user();
-    }
-})

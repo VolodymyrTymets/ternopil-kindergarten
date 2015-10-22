@@ -6,7 +6,7 @@ Template.ActionColumn.helpers({
 Template.ActionColumn.events({
     'click button[data-action="remove-bid"]': function (e,tmp) {
         Meteor.call('removeBid',tmp.data._id, function (err,res) {
-           if(!err) alert('was removed');
+           if(!err)  sAlert.success(TAPi18n.__('removeSucess'));
         });
     }
 });

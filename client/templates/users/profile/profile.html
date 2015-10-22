@@ -1,0 +1,12 @@
+<template name="_loginButtonsAdditionalLoggedInDropdownActions">
+     {{> avatar user=user shape="circle" class='profile-img'}}
+    <div class="profile-text">
+        <h1 class="profile-name">{{user.profile.name}}</h1>
+
+        {{#if Admin}}
+            <a class="btn btn-info btn-block " href="{{pathFor 'kindergartenEditor' _id='new' }}">{{_ 'ami_new_kindergarten'}}</a>
+        {{else}}
+            <a class="btn btn-info btn-block " href="{{pathFor 'personalBids'}}">{{_ 'personalBids'}}</a>
+        {{/if}}
+    </div>
+</template>

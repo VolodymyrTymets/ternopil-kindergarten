@@ -1,0 +1,64 @@
+<template name="PersonalBids">
+    <div class="row">
+        <div class="col-md-12 well">
+            <h1>{{_'bids'}} <span class="small"> {{_ 'of'}} {{name}}</span> </h1>
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th> {{_ 'kindergarten'}}</th>
+                        <th><a data-action="sort" data-name="name" data-order="1">{{_ 'name'}}  </a>
+                            <span class ='glyphicon {{spanClass}}'></span>
+                        </th>
+                        <th><a data-action="sort" data-name="surname" data-order="1">{{_ 'surname'}}  </a>
+                            <span class ='glyphicon {{spanClass}}'></span>
+                        </th>
+                        <th><a data-action="sort" data-name="lastName" data-order="1">{{_ 'last_name'}}  </a>
+                            <span class ='glyphicon {{spanClass}}'></span>
+                        </th>
+                        <th><a data-action="sort" data-name="phone" data-order="1">{{_ 'phone'}}  </a>
+                            <span class ='glyphicon {{spanClass}}'></span>
+                        </th>
+                        <th><a data-action="sort" data-name="address" data-order="1">{{_ 'address'}}  </a>
+                            <span class ='glyphicon {{spanClass}}'></span>
+                        </th>
+                        <th>{{_ 'files'}}</th>
+                        <th>{{_ 'remove'}}</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each bids}}
+                        <tr>
+                            <td>
+                                <a href="{{pathFor 'kindergarten' _id = this.kindergartenId }}">{{kindergartenName this.kindergartenId}}</a>
+                            </td>
+                            <td>{{this.surname}}</td>
+                            <td>{{this.surname}}</td>
+                            <td>{{this.lastName}}</td>
+                            <td>{{this.phone}}</td>
+                            <td>{{this.email}}</td>
+                            <td>{{this.address}}</td>
+                            <td>
+                                <ul class="list-group" >
+                                    <li class="list-group-item">
+                                        {{_ 'certificate'}}: <span class="mdi-file-cloud-done">  </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        {{_ 'birthCertificate'}}:  <span class="mdi-file-cloud-done"></span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        {{_ 'statement'}}:   <span class="mdi-file-cloud-done"></span>
+                                    </li>
+                                 </ul>
+                            </td>
+                            <td>
+                                <button data-action="remove-bid" data-id="{{this._id}}"  class="btn btn-default btn-fab btn-raised mdi-action-delete"></button>
+                            </td>
+                        </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</template>
